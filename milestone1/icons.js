@@ -19,6 +19,84 @@ const objects = [
   type: "fa-crow",
   family: "animals"
 },
+{
+  name: "dove",
+  prefix: "fas",
+  type: "fa-dove",
+  family: "animals"
+},
+{
+  name: "dragon",
+  prefix: "fas",
+  type: "fa-dragon",
+  family: "animals"
+},
+{
+  name: "horse",
+  prefix: "fas",
+  type: "fa-horse",
+  family: "animals"
+},
+{
+  name: "hippo",
+  prefix: "fas",
+  type: "fa-hippo",
+  family: "animals"
+},
+{
+  name: "fish",
+  prefix: "fas",
+  type: "fa-fish",
+  family: "animals"
+},
+{
+  name: "carrot",
+  prefix: "fas",
+  type: "fa-carrot",
+  family: "food"
+},
+{
+  name: "apple-alt",
+  prefix: "fas",
+  type: "fa-apple-alt",
+  family: "food"
+},
+{
+  name: "lemon",
+  prefix: "fas",
+  type: "fa-lemon",
+  family: "food"
+},
+{
+  name: "pepper-hot",
+  prefix: "fas",
+  type: "fa-pepper-hot",
+  family: "food"
+},
+{
+  name: "user-astronaut",
+  prefix: "fas",
+  type: "fa-user-astronaut",
+  family: "user"
+},
+{
+  name: "user-graduate",
+  prefix: "fas",
+  type: "fa-user-graduate",
+  family: "user"
+},
+{
+  name: "user-ninja",
+  prefix: "fas",
+  type: "fa-user-ninja",
+  family: "user"
+},
+{
+  name: "user-secret",
+  prefix: "fas",
+  type: "fa-user-secret",
+  family: "user"
+},
 ]
 console.log(objects);
   // Selezioniamo il container icons
@@ -36,11 +114,14 @@ print(container, objects);
 // tip: il template literal ci puo aiutare con il markup
 
 const print = (container, objects) => {
-  objects.forEach((animal) => {
+  objects.forEach((icons) => {
     container.append(
-      `<div> <i class= "${animal.prefix} ${animal.type}"></i>
-      <div class="title">${animal.name}</div> </div>
+      `<div> <i class="${icons.prefix} ${icons.type}"></i>
+      <div class="title">${icons.name}</div> </div>
       `
     )
+    console.log(icons.name);
   });
+
+
 }
