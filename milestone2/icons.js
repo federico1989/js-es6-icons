@@ -128,7 +128,8 @@ printObj(newArray,container);
 function printObj (array, selector){
   array.forEach(element => {
     const {name,prefix,type,color} = element;
-    selector.innerHTML += `<div>
+    selector.innerHTML +=
+      `<div>
       <i class="${prefix} ${type}" style="color:${color}"></i>
       <div class="title">${name.toUpperCase()}</div>
       </div>
